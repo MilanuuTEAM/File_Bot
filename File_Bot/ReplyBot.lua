@@ -1,181 +1,138 @@
 local function Reply(msg)
-local text = msg.content_.text_
-if ChatType == 'sp' or ChatType == 'gp'  then
-if not DevSOFI:get(Dragon..'SOFI:Lock:Reply'..msg.chat_id_) then
-if text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
-if Sudo(msg) then
-rd = 'مطوريي اغلط شكد متريد نورتنه ، ♥️💪🏿'
-elseif SudoBot(msg) then
-rd = 'احترم نفسكك لا عبالكك رافعيك مطور ، 🖕🏿♥️'
-elseif SOFIConstructor(msg) then
-rd = 'تاج راسيي غير انت منشئ المجموعه ،🖐🏿♥️'
-elseif Constructor(msg) then
-rd = 'تاج راسيي انت المنشئ الاساسي ،🖐🏿♥️'
-elseif BasicConstructor(msg) then
-rd = 'حبيبي المنشئ استقبلها منكك ،👍🏿♥️'
-elseif Manager(msg) then
-rd = 'حبيبي راح اسامحكك لان مدير وع راسي ، 🖐🏿♥️'
-elseif Admin(msg) then
-rd = 'راح اسامحكك هلمره لانك ادمن ، ☝🏿♥️'
-elseif VipMem(msg) then
-rd = 'راح احترمكك تره بس هلمره لانك مميز عندي ، ☝🏿♥️'
-else
-rd = 'لكك هوه انت عضو وجاي تغلط ؟، 🖕🏿♥️'
+local text = msg.content.text.text
+if text== "انجب" or text== "نجب" or text=="انجبي" or text=="نجبي" then
+if msg.ControllerBot then  
+return merolua.sendText(msg.chat_id,msg.id,"تامر امر سيادة المطور تاج راسي 😊")
+elseif msg.TheBasicsQ then 
+return merolua.sendText(msg.chat_id,msg.id,"انت المالك على راسي على راسسيي بصوت ابو علوش العراقي😂")
+elseif msg.Originators then 
+return merolua.sendText(msg.chat_id,msg.id,"حبيبي والله المنشئ بعد اخذلك راشدي فد مره 😒😂")
+elseif msg.Managers then 
+return merolua.sendText(msg.chat_id,msg.id,"اكلك شنو واذا مدير عود ؟ يله راح اسكت لخاطر البقية 🙂🙂")
+elseif msg.Addictive then 
+return merolua.sendText(msg.chat_id,msg.id,"فوك ممنطيك رتبةادمن هيج تجازيني ؟ انت انجب 😑")
+else 
+return merolua.sendText(msg.chat_id,msg.id,"انجب لك لا اشحتك 😒")
+end 
 end
-Dev_SOFI(msg.chat_id_, msg.id_, 1,rd, 1, 'html')
+if Redis:get(hawks..'replayallbot'..msg.chat_id) then
+if text =="هلو" and Redis:get(hawks..'replayallbot'..msg.chat_id) then 
+return merolua.sendText(msg.chat_id,msg.id,ns[math.random(#ns)])
 end
-if text == 'دي' or text == 'ديي' or text == 'دي بابه' then 
-DraGoN =  "آخلُِآقٌڪڪ لُِڪڪ 𖠙 😒🔪"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if (text== "شلونكم" or text== "شلونك" or text== "شونك" or text== "شلونج" or text== "شلونكم") and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,sss[math.random(#sss)])
 end
-if text == 'السلام عليكم' or text == 'سلام عليكم' then 
-DraGoN =  "ياھَہّلْاا ۅﻋ̝̚لْيڪْم الْﺳ̭͠ لْام 𖠙 🤤♥️"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if (text==" باي" or text == "باي") and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,dr[math.random(#dr)])
 end
-if text == '😭💔' or text == '😭😭' or text == '😭😭😭' or text == '😿💔' or text == '😭😭😭' or text == '😭😭😭😭' then 
-DraGoN =  "مآآعٍآشُ آلُِي يزعٍلُِڪڪ 𖠙 😏♥️"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if (text== "احبك" or text=="حبك") and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,lovm[math.random(#lovm)])
 end
-if text == '🌚💔' or text == '💔🌚' or text == '🚶‍♂💔' or text == '💔' or text == '😔💔' or text == '🚶‍♀💔' or text == '😭' then 
-DraGoN =  "شبّيي اﻟ̣̣פﻟ̣̣و 𖠙 😿💔"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if text== "تحبني" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,lovm[math.random(#lovm)])
 end
-if text == 'باي' or text == 'بااي' or text == 'اروح' or text == 'اروح احسن' or text == 'اولي احسن' or text == 'راح اروح' or text == 'باي انام' then 
-DraGoN =  "أُرٌجُعُ عٍيدِهآآ مٍوو تنِْسةه 𖠙 🤤♥️"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if text=="اطربنه" and Redis:get(hawks..'replayallbot'..msg.chat_id) then 
+return merolua.sendText(msg.chat_id,msg.id,song[math.random(#song)])
 end
-if text == 'هلو' or text == 'هلاو' or text == 'هلا' or text == 'هلاوو' or text == 'هيلاو' or text == 'هيلاوو' or text == 'هلاا' then 
-local DraGoN = {"اࠗط็لق֯ق֯ هٞللاࠗ୨و 𖠙 🤤♥️" ,"هۂَلاا نۨہٰورتت يعمۘري 𖠙 🤤♥️" } 
-DevSOFI2 = math.random(#DraGoN) 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN[DevSOFI2] , 1, 'md') 
-return false
+if text== "تف" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"عليككك ادبسز 😒")
 end
-if text == 'شونك' or text == 'شونج' or text == 'شلونك' or text == 'شلونج' or text == 'شونكم' or text == 'شلونكم' or text == 'شلخبار' or text == 'شلون الاخبار' or text == 'شخبارك' then 
-local DraGoN = {"ماﺷ͠ يةھَہّ يﻋ̝̚مريي ۅاﻧﺗ̲ت 𖠙 🤤♥️" ,"الحۡمۘدللهۂَ ٰوانۨہتت 𖠙 🤤♥️","تمۘامۘ عمۘري ٰوانۨہتت 𖠙 🤤♥️"} 
-DevSOFI2 = math.random(#DraGoN) 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN[DevSOFI2] , 1, 'md') 
-return false
+if text== "صاكه" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"ويننهههاااا دزلي حسابههااا 😍😍")
 end
-if text == 'وينك' or text == 'وينج' then
-DraGoN =  "مْوٌجہوٌدِ يہمْگُ يحلوُ 𖠙 😉♥️"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if text== "وينك" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"مشغول شتريد ؟")
 end
-if text == 'بوت عواي' or text == 'بوت زربه' or text == 'البوت عاوي' or text == 'البوت زربه' then
-DraGoN =  "اطردكك تجرب ؟ ، 😕🔪"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if text== "منورين" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"حبيبي ماكو نور بدونك انت ♥️")
 end
-if text == 'نايمين' or text == 'ميتين' then
-DraGoN =  "طُآمسين ووعٍيوونڪ 𖠙 😪🖤ۦ"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if text== "هاي" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"هايات شلونك ؟")
 end
-if text == 'هلوباي' or text == 'هلو باي' then  
-DraGoN =  "شحۡسۜيت مۘنۨہ هيجۚ ּكتبت ؟ 🌝♥️"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if text== "🙊" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"كيوت القرد الخجول هههه 😂♥️")
 end
-if text == 'اكلك' or text == 'اكلج' or text == 'اكلكم' then 
-DraGoN =  "ڪوولُِ مآڪوولُِ لُِآحٍدِ 𖠙 😉♥️"
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "😢" or text== "😭😭" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"شبي الحلو زعلان ويبجي ؟ ☹️")
 end
-if text == 'فرخ' or text == 'فرخه' then
-DraGoN =  "ٰوينۨہهۂَ خۡل احۡصرهۂَ 𖠙 😹♥️" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md') 
-return false
+if text== "☹️☹️" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"منو وي حبيبي منو مزعله ؟؟")
 end
-if text == 'سورس صوفي' or text == 'سورس دراكون' or text == 'سورس دراكون' or text == 'سورس زربه' or text == 'السورس زربه' or text == 'سورس عاوي' or text == 'السورس عاوي' then 
-DraGoN =  "لُِآ سوورس خآلُِتڪ دِي لُِڪ 𖠙 😒🔪" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "منور" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"من بعدك ضلعي ♥️")
 end
-if text == 'بوسني' or text == 'بوسيني' then 
-DraGoN =  "-محِااﭑةه ، ݪسِقق  🥺♥️♥️؟." 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "😒" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"شبيك حبي ؟ منو وياك ؟")
 end
-if text == "صباحوا" or text == "صباح الخير" or text == "صباحو" then
-DraGoN =  "صَباحيّ ، ﭑنتةه🥺💞💞." 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "مح" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"اذووووب 🤤")
 end
-if text == "اكو بوت" or text == "اكو بوت؟" or text == "عدكم بوت" or text == "عندكم بوت" or text == "عدكم بوت؟" or text == "عندكم بوت؟" or text == "تردون بوت" or text == "تردون بوت؟" or text == "وين البوت" or text == "وين البوت؟" then
-DraGoN =  "-موَ بعَينڪۃ ، شنيَ ، 🌝🌝." 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "شكرا" or text== "ثكرا" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return  merolua.sendText(msg.chat_id,msg.id,"مو تدلل حبيبي ♥️")
 end
-if text == "جاو" or text == "ججاو" then
-DraGoN =  "- ۅَتعۅفنيَ ؟." 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "انته وين" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"شعليك ؟")
 end
-if text == "تف" or text == "تفف" then
-DraGoN =  "چا غير مَي ، ۅࢪدَ ،" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "😍" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"عاشك الاخو 😂")
 end
-if text == "تحبني" or text == "تحبني؟" or text == "تحبني؟؟" then
-DraGoN =  "شعندِيّ ، غيࢪكَ🥵♥️♥️♥️" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "اكرهك" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"ع اساس اني عايز عليك 🤨")
 end
-if text == "جوعان" or text == "جوعانه" then
-DraGoN =  "ټعاَل ﭑڪلنيَ ، 🌝." 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "اريد اكبل" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"تعال نكبل سوه 😂♥️")
 end
-if text == "ههه" or text == "هههه" or text == "ههههه" or text == "هههههه" or text == "ههههههه" then
-DraGoN =  "جَعل ، محدَ غيݛكَ ، يضحكَ  ، ♥️♥️" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "ضوجه" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"شي اكيد لان معندك حبيبه ")
 end
-if text == "وينكم" then
-DraGoN =  "حَيݪيٰ ، 🥺💞" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "حفلش" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"اذا انت كفو فلش")
 end
-if text == "احبك" or text == "حبك" then
-DraGoN =  "ﭑنيۿمَ ، قسمَہ، 🥺💞" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "نايمين" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"اني سهران احرسكم")
 end
-if text == "بوت ملطلط" then
-DraGoN =  "ربي صبرني 😞🌾" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "شكو" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"ماكو ، ليش تسال ؟")
 end
-if text == 'وينك' or text == 'وينج' then
-DraGoN =  "مْوٌجہوٌدِ يہمْگُ يحلوُ  😉♥️" 
-Dev_SOFI(msg.chat_id_, msg.id_, 1, DraGoN, 1, 'md')
-return false
+if text== "كلخرا" or text== "اكل خره" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"لا تغلط حيوان")
 end
+if text== "جوعان"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"تعال اكلني بعد")
 end
-
-if Manager(msg) then
-if text == 'تفعيل ردود البوت' or text == 'تفعيل الردود' then
-if not DevSOFI:get(Dragon..'SOFI:Lock:Reply'..msg.chat_id_) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '⌯︙ردود البوت بالتاكيد مفعله ', 1, 'md')
-else
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '⌯︙تم تفعيل ردود البوت', 1, 'md')
-DevSOFI:del(Dragon..'SOFI:Lock:Reply'..msg.chat_id_)
-end end
-if text == 'تعطيل ردود البوت' or text == 'تعطيل الردود' then
-if DevSOFI:get(Dragon..'SOFI:Lock:Reply'..msg.chat_id_) then
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '⌯︙ردود البوت بالتاكيد معطله ', 1, 'md')
-else
-DevSOFI:set(Dragon..'SOFI:Lock:Reply'..msg.chat_id_,true)
-Dev_SOFI(msg.chat_id_, msg.id_, 1, '⌯︙تم تعطيل ردود البوت', 1, 'md')
-end end
+if text== "افلش"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"حتى ابلعك حظرررر")
 end
+if text== "شكو ماكو"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"غيرك بالكلب ماكووو ♥️️")
 end
-
+if text== "مرحبا"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"مرحبتين اهلا")
+end
+if text== "سلام" or text== "السلام عليكم" or text== "سلام عليكم" or text=="سلامن عليكم" or text=="السلامن عليكم" and Redis:get(hawks..'replayallbot'..msg.chat_id) then 
+return merolua.sendText(msg.chat_id,msg.id,"عليكم السلام اهلا" )
+end
+if text== "عضه"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"عيب هههه" )
+end
+if text== "البوت واكف" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"لعد كدامك شنو ؟")
+end
+if text== "ضايج"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"ليش ضايج حب ؟.")
+end
+if text== "ضايجه"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"منو مضوجج عمري ؟")
+end
+if text== "تبادل"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"متشبعون من التبادل ؟")
+end
+if text== "دي"  or text== "ديي" and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"امشيك بيهااا")
+end
+if text== "هلا"  or text== "هلاو"  and Redis:get(hawks..'replayallbot'..msg.chat_id) then
+return merolua.sendText(msg.chat_id,msg.id,"ههــلا ححبيـبي")
+end
 end
 return {
 Dragon = Reply
