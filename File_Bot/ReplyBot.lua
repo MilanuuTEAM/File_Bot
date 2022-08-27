@@ -134,6 +134,3 @@ if text== "هلا"  or text== "هلاو"  and Redis:get(hawks..'replayallbot'..m
 return merolua.sendText(msg.chat_id,msg.id,"ههــلا ححبيـبي")
 end
 end
-return {
-Dragon = Reply
-}
