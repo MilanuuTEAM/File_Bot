@@ -1,6 +1,7 @@
 local function ReplyBot(msg)
 local text = msg.content.text.text
-if chat_type == 'sp' or chat_type == 'gp'  thenif text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
+if chat_type == 'sp' or chat_type == 'gp'  theni
+f text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
 if msg.Developers then
 rd = 'مطوريي اغلط شكد متريد نورتنه ، ♥️💪🏿'
 elseif msg.DevelopersQ then
