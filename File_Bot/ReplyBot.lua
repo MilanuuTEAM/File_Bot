@@ -1,17 +1,5 @@
-function ReplyBot(msg)
-if msg.content.voice_note then 
-local File = json:decode(https.request('https://api.telegram.org/bot'..Token..'/getfile?file_id='..msg.content.voice_note.voice.remote.id))
-local Get_Info = io.popen('curl -s "https://fastbotss.herokuapp.com/yt?vi=https://api.telegram.org/file/bot'..Token..'/'..File.result.file_path..'"'):read('*a')
-local json = JSON.decode(Get_Info)
-if json and json.text then
-text = json.text
-end
-elseif msg.content.text then
-text = msg.content.text.text
-else 
-text = nil
-end
-
+local function ReplyBot(msg)
+local text = msg.content.text.text
 
 if text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
 if msg.Developers then
