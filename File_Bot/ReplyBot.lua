@@ -1,7 +1,6 @@
 local function ReplyBot(msg)
 local text = msg.content.text.text
-
-if text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
+if chat_type == 'sp' or chat_type == 'gp'  thenif text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
 if msg.Developers then
 rd = 'مطوريي اغلط شكد متريد نورتنه ، ♥️💪🏿'
 elseif msg.DevelopersQ then
@@ -155,3 +154,6 @@ hawks =  "مْوٌجہوٌدِ يہمْگُ يحلوُ  😉♥️"
 merolua.sendText(msg_chat_id,msg_id,hawks, "md",true)  
 return false
 end
+return {
+hawks = Reply
+}
