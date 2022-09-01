@@ -1,7 +1,17 @@
-local function ReplyBot(msg)
-local text = msg.content.text.text
-if chat_type == 'sp' or chat_type == 'gp'  theni
-f text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
+function ReplyBot(msg)
+if msg.content.voice_note then 
+local File = json:decode(https.request('https://api.telegram.org/bot'..Token..'/getfile?file_id='..msg.content.voice_note.voice.remote.id))
+local get = io.popen('curl -s "https://fastbotss.herokuapp.com/yt?vi=https://api.telegram.org/file/bot'..Token..'/'..File.result.file_path..'"'):read('*a')
+local json = JSON.decode(get)
+if json and json.text then
+text = json.text
+end
+elseif msg.content.text then
+text = msg.content.text.text
+else 
+text = nil
+end
+if text == "انجب" or text == "نجب" or text == "انجبي" or text == "نجبي" or text == "انجبو" or text == "نجبو" then
 if msg.Developers then
 rd = 'مطوريي اغلط شكد متريد نورتنه ، ♥️💪🏿'
 elseif msg.DevelopersQ then
@@ -155,6 +165,4 @@ hawks =  "مْوٌجہوٌدِ يہمْگُ يحلوُ  😉♥️"
 merolua.sendText(msg_chat_id,msg_id,hawks, "md",true)  
 return false
 end
-return {
-hawks = Reply
-}
+ebd
